@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
  * @author : https://github.com/quentin-abei
  */
 contract NicoWhitelist {
-    
+    // 0xcb78d600e22b8cF6de7a752DE31C4963563eD5cC
     error AlreadyWhitelisted(address sender);
     error WhitelistSpotsSoldOut(uint16 maxNumberReached);
     // @dev set the Max number of whitelisted addresses allowed

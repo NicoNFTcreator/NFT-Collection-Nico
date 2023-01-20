@@ -4,5 +4,8 @@
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.5",
     "@nomicfoundation/hardhat-toolbox": "^2.0.1",
     "hardhat": "^2.12.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
