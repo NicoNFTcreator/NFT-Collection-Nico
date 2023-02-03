@@ -69,18 +69,12 @@ contract TheColorfulWarriorERC721A is Ownable, ERC721A {
         require(sellingStep == Step.PublicSale, "Public sale is not activated");
         require(totalSupply() + _quantity <= MAX_WHITELIST + MAX_PUBLIC, "Max supply exceeded");
         require(msg.value >= price * _quantity, "Not enought funds");
-        _safeMint(_account, 51);
-        _safeMint(_account, 151);
-        _safeMint(_account, 564);
-        _safeMint(_account, 1);
-        _safeMint(_account, 20);
-        _safeMint(_account, 300);
         _safeMint(_account, _quantity);
     }
 
     function gift(address _to, uint _quantity) external onlyOwner {
-        require(sellingStep > Step.PublicSale, "Gift is after the public sale");
         require(totalSupply() + _quantity <= MAX_SUPPLY, "Reached max Supply");
+        require(MAX_SUPPLY + MAX_GIFT <= totalSupply());
         _safeMint(_to, _quantity);
     }
     
